@@ -2,27 +2,45 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-  <title>function checker</title>
-
-  <script src="elm.js"></script>
-  <script src="rust.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Checker</title>
+  <script src="wasm_loader.js"></script>
   <script src="script.js"></script>
-
-  <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="main()">
-  <div id="elmDiv"></div>
+<body onload="init()" style="text-align: center; float: center;">
+  <h1>Function Checker</h1>
+
+  <div id="funcs"></div>
+  <div style="margin-top: 5px;">
+    <button onclick="remove()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-trash2-icon lucide-trash-2">
+        <path d="M3 6h18" />
+        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+        <line x1="10" x2="10" y1="11" y2="17" />
+        <line x1="14" x2="14" y1="11" y2="17" />
+      </svg>
+    </button>
+
+    <button onclick="add()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-circle-plus-icon lucide-circle-plus">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M8 12h8" />
+        <path d="M12 8v8" />
+      </svg>
+    </button>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <div id="table"></div>
+  </div>
+
 </body>
 
 </html>

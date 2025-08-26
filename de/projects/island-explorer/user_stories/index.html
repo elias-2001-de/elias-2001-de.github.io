@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Stories - Sprint Übersicht</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="window.history.back()"
+            style="position: fixed; left: 20px; top: 20px; width: 50px; height: 50px; border-radius: 50%; border: none; background: rgba(0,0,0,0.7); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; backdrop-filter: blur(10px); transition: all 0.3s ease;"
+            onmouseover="this.style.background='rgba(0,0,0,0.9)'; this.style.transform='scale(1.1)'"
+            onmouseout="this.style.background='rgba(0,0,0,0.7)'; this.style.transform='scale(1)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+
+        <div class="header">
+            <h1>User Stories Übersicht</h1>
+            <p>Sprint Planning und Entwicklungsdokumentation</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Sprints</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">32</div>
+                <div class="stat-label">User Stories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">54</div>
+                <div class="stat-label">Story Points</div>
+            </div>
+        </div>
+
+        <div class="toggle-all">
+            <button class="btn" onclick="toggleAll()">Alle auf-/zuklappen</button>
+        </div>
+
+        
+        
+        <div class="sprint" id="sprint-1">
+            <div class="sprint-header" onclick="toggleSprint('sprint-1')">
+                <h2>Grundgerüst</h2>
+                <div class="sprint-points">
+                    
+                    <span>Produktpunkte: 15</span>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="sprint-content">
+                
+                <div class="user-story" id="story-1-1">
+                    <div class="story-header" onclick="toggleStory('story-1-1')">
+                        <div class="story-title">
+                            <span class="story-name">Registrierung</span>
+                            <span class="story-points">4 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich mich registrieren können, damit nur ich Zugriff auf meine persönlichen Daten habe.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Loginseite enthält einen "Registrieren" Button</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Registrieren" Button wird User auf eine "Registrieren" Seite zum Anlegen eines neuen User Accounts weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für angemeldete User ist der "Registrieren" Button nicht sichtbar und die "Registrieren" Seite nicht erreichbar (Weiterleitung auf Karte)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">"Registrieren" Seite enthält Eingabefelder für Vorname, Nachname, Adresse, Email, Passwort und Passwort- Bestätigung und einen "Registrieren" Button um die Registrierung durchzuführen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Registrierung kann nur durchgeführt werden, wenn alle Felder vom User korrekt ausgefüllt wurden (Validierung)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Registrierung kann nur durchgeführt werden wenn noch kein User Account mit der angegebenen Mail Adresse existiert und das Passwort mindestens 8 Zeichen hat</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Wenn eine Registrierung nicht durchgeführt werden kann bekommt der User Feedback welche Eingaben fehlerhaft sind oder warum eine Registrierung nicht durchgeführt werden kann</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nach erfolgreicher Registrierung wird der User automatisch angemeldet und auf die Karte weitergeleitet</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-1-2">
+                    <div class="story-header" onclick="toggleStory('story-1-2')">
+                        <div class="story-title">
+                            <span class="story-name">Anmelden</span>
+                            <span class="story-points">3 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich mich einloggen können, damit ich wieder Zugriff auf meine persönlichen Daten bekomme.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Registrierungsseite enthält einen "Login" Button</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Login" Button wird User auf eine "Login" Seite weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für angemeldete User ist die "Login" Seite nicht erreichbar (Weiterleitung auf Karte)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">"Login" Seite enthält Eingabefelder für Mail und Passwort und einen "Login" Button um die Anmeldung durchzuführen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Anmeldung kann nur durchgeführt wenn alle Felder vom User korrekt ausgefüllt wurden (Validierung)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Anmeldung kann nur durchgeführt wenn ein User mit der Mail Adresse existiert und das Passwort mit dem angegebenen Passwort bei der Registrierung übereinstimmt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Wenn eine Anmeldung nicht durchgeführt werden kann bekommt der User Feedback welche Eingaben fehlerhaft sind oder warum eine Anmeldung nicht durchgeführt werden kann</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nach erfolgreicher Anmeldung wird User auf die Karte weitergeleitet</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-1-3">
+                    <div class="story-header" onclick="toggleStory('story-1-3')">
+                        <div class="story-title">
+                            <span class="story-name">Abmelden</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich mich abmelden können, damit andere Personen nicht auf meine persönlichen Informationen zugreifen können.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Profilseite enthält einen "Abmelden" Button</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Abmelden" Button wird User abgemeldet und auf die Loginseite weitergeleitet</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-1-4">
+                    <div class="story-header" onclick="toggleStory('story-1-4')">
+                        <div class="story-title">
+                            <span class="story-name">Persönliche Informationen</span>
+                            <span class="story-points">4 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich meine persönlichen Informationen ändern können, damit ich meine Informationen anpassen kann die ich bei der Registrierung angegeben habe.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">"Mein Profil" Seite enthält "Bearbeiten" Buttons</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Bearbeiten" Button kann er/sie die persönlichen Informationen auf einer separaten Seite mithilfe von Eingabefeldern ändern und mit einem "Speichern" Button speichern</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Mail Adresse kann nicht geändert werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Eingabefelder sind mit den bisherigen persönlichen Informationen ausgefüllt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Eingabefeld für das Passwort ist nicht ausgefüllt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für das Passwort existiert ein weiteres Eingabefeld für die Passwort- Bestätigung</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die persönlichen Informationen können nur gespeichert werden, wenn alle Felder vom User korrekt ausgefüllt wurden (Validierung)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Bearbeitung von persönlichen Informationen des Profils kann durch Drücken auf einen "Abbrechen" Button abgebrochen werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Bei Speicherung oder Abbruch der Bearbeitung von persönlichen Informationen wird der User auf die "Mein Profil" Seite zurückgeleitet</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-1-5">
+                    <div class="story-header" onclick="toggleStory('story-1-5')">
+                        <div class="story-title">
+                            <span class="story-name">Über uns</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich Informationen über die Webseitenbetreiber ansehen können, damit ich mehr über die Personen hinter der Webseite erfahre.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Webseite enthält einen "Über uns" Link</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Über uns" Link kommt er/sie zu der "Über uns" Seiten der Gruppe</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die "Über uns" Seite enthält einen Eintrag für jedes Gruppenmitglied in einer scrollbaren Liste</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Jeder Eintrag besteht aus einem Bild, Vor- und Nachname, Semester, Studiengang, und der Universitätsmailadresse des Gruppenmitglieds</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="sprint" id="sprint-2">
+            <div class="sprint-header" onclick="toggleSprint('sprint-2')">
+                <h2>Karte & Events</h2>
+                <div class="sprint-points">
+                    
+                    <span>Produktpunkte: 15</span>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="sprint-content">
+                
+                <div class="user-story" id="story-2-1">
+                    <div class="story-header" onclick="toggleStory('story-2-1')">
+                        <div class="story-title">
+                            <span class="story-name">Eventliste</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich eine Liste aller angebotenen Events ansehen können, damit ich einen Überblick über alle angebotenen Events bekomme.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Navigationsleiste enthält einen Button für "Events" Seite</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Auf der "Events" Seite ist eine Liste aller angebotenen Events zu sehen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Jedes Listenelement in der Produktliste enthält Bild, Name, Startdatum, Enddatum und Preis des Produkts</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Enddatum wird ausgeblendet, falls Startdatum und Enddatum übereinstimmen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nicht mehr aktuelle Events werden nicht mehr in der Liste angezeigt (Events deren Enddatum nach dem aktuellen Datum liegt)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für nicht angemeldete User ist die "Events" Seite nicht erreichbar (Weiterleitung auf "Login" Seite)</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-2">
+                    <div class="story-header" onclick="toggleStory('story-2-2')">
+                        <div class="story-title">
+                            <span class="story-name">Eventsuche</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich die angebotenen Events durchsuchen können, damit ich mein gesuchtes Event schneller finde.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">"Event" Seite enthält ein Suchfeld mit Eingabefeld für den Suchbegriff</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Suche wird gestartet, sobald der Suchbegriff eingegeben wird</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Suche wird aktualisiert, wenn der Suchbegriff geändert wird</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nach jeder Eingabe/Änderung des Suchbegriffs werden in der Eventliste nur noch Events angezeigt die den vollständigen Suchbegriff im Namen enthalten</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Zwischen Groß- und Kleinschreibung wird nicht unterschieden (z.B., der Suchbegriff "brunch" führt dazu, dass Einträge die "Brunch" enthalten angezeigt werden)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Wenn das Eingabefeld leer ist, werden alle Even</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-3">
+                    <div class="story-header" onclick="toggleStory('story-2-3')">
+                        <div class="story-title">
+                            <span class="story-name">Eventseite</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich ein Event selektieren können, damit ich mehr Informationen über das Event erhalte.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Drückt der User auf ein Element in der Eventliste öffnet sich die Produktseite des Events</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Produktseite enthält Bild, Name, Startdatum, Enddatum, Preis und Beschreibung des Produkts</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Enddatum wird ausgeblendet, falls Startdatum und Enddatum übereinstimmen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine interaktive Karte zeigt den Ort des Events mittels eines Markers an</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Über einen "Zurück" Button kann ein User auf die Eventliste zurückkehren</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Entwicklungshinweise:</div>
+                            
+                            <div>HTML Beschreibung kann mittels dem [innerHTML] Attribut geladen werd</div>
+                            
+                        </div>
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-4">
+                    <div class="story-header" onclick="toggleStory('story-2-4')">
+                        <div class="story-title">
+                            <span class="story-name">Eventtickets buchen</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich ein Ticket zu einem Event bestellen können, damit ich an dem Event teilnehmen kann.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Eventseite enthält ein "Ticket Buchen" Button</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Ticket Buchen" Button wird er/sie auf die "Bestellen" Seite weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die "Bestellen" Seite zeigt Name, Startdatum, Enddatum und Preis des Produkts an</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Enddatum wird ausgeblendet, falls Startdatum und Enddatum übereinstimmen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die "Bestellen" Seite hat Buttons für verschiedene Zahlungsanbieter, mit denen die Bestellung bezahlt werden kann: Zahlung via "HciPal", Zahlung via "BachelorCard", Zahlung via "SwpSafe" </li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf einen Button für einen Zahlungsanbieter, so wird er/sie auf eine Seite zur Durchführung des Bezahlvorgangs weitergeleitet (siehe User Story "Bezahlvorgang")</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die "Bestellen" Seite hat einen "Zurück" Button mit dem der User auf die Eventseite zurückkehrt</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-5">
+                    <div class="story-header" onclick="toggleStory('story-2-5')">
+                        <div class="story-title">
+                            <span class="story-name">Bezahlvorgang</span>
+                            <span class="story-points">4 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich meine Bestellung direkt bezahlen können, damit ich den Preis der Bestellung nicht manuell überweisen muss.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">"Bestellen" Seite bietet eine Auswahl zwischen drei Zahlungsanbietern: Zahlung via "HciPal", Zahlung via "BachelorCard", Zahlung via "SwpSafe" (siehe User Story "Eventtickets buchen")</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Bei Auswahl einer Zahlungsoption werden Eingabefelder für die benötigten Daten der Zahlungsoption angezeigt (siehe Figma Spezifikation)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Bei Eingabe der benötigten Daten wird direkt überprüft ob der Account (Accountname, Kreditkartennummer, SwpSafe Code) aus Deutschland kommt (um Bestellungen aus dem Ausland zu vermeiden) und User bekommt sofort Feedback ob die Zahlung mit dem Account erlaubt ist</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Seite zur Durchführung des Bezahlvorgangs enthält einen "Jetzt Kaufen" und einen "Abbrechen" Button</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Bestellung wird mit Drücken auf den "Jetzt Kaufen" Button ausgeführt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Bestellung kann nur ausgeführt werden wenn die Zahlungsoption mit den eingegebenen Daten validiert wurde</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Sobald ein User die Bestellung abschließt (und die Zahlungsdaten valide sind) wird die Transaktion durchgeführt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nach erfolgreicher Bestellung wird  der User auf die "Ticketkauf erfolgreich" Seite weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drück ein User auf den "Abbrechen" Button, so wird die Bestellung abgebrochen</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Entwicklungshinweise:</div>
+                            
+                            <div>Requests an die Zahlungsdienstleister können aus Sicherheitsgründen nur über das Backend erfolgen</div>
+                            
+                            <div>Dokumentation: https://gitlab.inf.uni-konstanz.de/ag-hci/lectures/2023-software-projekt/swp-2023-beispiele/-/wikis/Zahlungssysteme</div>
+                            
+                        </div>
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-6">
+                    <div class="story-header" onclick="toggleStory('story-2-6')">
+                        <div class="story-title">
+                            <span class="story-name">Gekaufte Tickets</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich meine gekauften Tickets ansehen können, damit ich weiß welche Event Tickets ich bereits gekauft habe.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Navigationsleiste enthält einen Button "Meine Tickets"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Meine Tickets" Button wird User auf eine "Meine Tickets" Seite weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für nicht angemeldete User ist die "Meine Tickets" Seite nicht erreichbar (Weiterleitung auf "Login" Seite)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Auf der "Meine Tickets" Seite ist eine Liste aller Event Tickets zu sehen, die der User bisher gekauft hat</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Jedes Listenelement enthält Bild, Anzahl, Name, Startdatum, und Enddatum</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Enddatum wird ausgeblendet, falls Startdatum und Enddatum übereinstimmen</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-7">
+                    <div class="story-header" onclick="toggleStory('story-2-7')">
+                        <div class="story-title">
+                            <span class="story-name">Attraktionen</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich den genauen Ort von Attraktionen sehen können, damit ich weiß wo sich die Attraktion befindet.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Navigationsleiste enthält einen Button "Karte"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Drückt User auf den "Karte" Button wird User auf eine "Karten" Seite weitergeleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">"Karten" Seite zeigt interaktive Karte der Mainau</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für nicht angemeldete User ist die "Karten" Seite nicht erreichbar (Weiterleitung auf "Login" Seite)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">"Karten" Seite enthält Marker für jede Attraktion der Mainau</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Position des Markers basiert auf den Koordinaten der Attraktion</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-2-8">
+                    <div class="story-header" onclick="toggleStory('story-2-8')">
+                        <div class="story-title">
+                            <span class="story-name">Attraktionenseite</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich eine Attraktion selektieren können, damit ich mehr Informationen über die Attraktion erhalte.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Drücken auf einen Marker in der Karte öffnet die Detailseite der Attraktion</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Detailseite der Attraktion enthält Bild, Name, und Beschreibung der Attraktion</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine interaktive Karte zeigt den Ort der Attraktion mittels eines Markers an</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Über einen "Zurück" Button kann User auf die Karte zurückkehre</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="sprint" id="sprint-3">
+            <div class="sprint-header" onclick="toggleSprint('sprint-3')">
+                <h2>Erweiterungen</h2>
+                <div class="sprint-points">
+                    
+                    <span>Produktpunkte: 10</span>
+                    
+                    
+                    <span>Software Engineering: 5</span>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="sprint-content">
+                
+                <div class="user-story" id="story-3-1">
+                    <div class="story-header" onclick="toggleStory('story-3-1')">
+                        <div class="story-title">
+                            <span class="story-name">Admin & Gärtner</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als App-Betreiber brauchen wir verschiedene Nutzertypen für die Mitarbeiter*innen und Besucher*innen der Mainau.Diese Nutzertypen haben entsprechend ihrer Rolle Zugriff auf verschieden Funktionen. Zum Beispiel können Admins Events bearbeiten und Gärtner die Anfragen des Grünes Telefons beantworten.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Es existieren die Rollen "Admin", "Gärtner" und "Besucher"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Alle Rollen verwenden denselben Login</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Beim Login wird erkannt, welcher Rolle die Email-Adresse angehört und der Nutzer bekommt nur die für seine Rolle relevanten Seiten angezeigt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins und Gärtner können keine Tickets erwerben, haben also keinen Zugriff auf die "Ticket buchen"- sowie "Gekaufte Tickets"-Seite</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Navigationsleiste enthält die entsprechenden Seitenlinks für die Seiten, auf die die Rolle Zugriff hat</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins können die Seiten: "Karte", "Events", "Events hinzufügen", "Rollenverwaltung" und "Profil" sehen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Gärtner können die Seiten "Karte", "FAQ", "Chats" und "Profil" sehen</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-2">
+                    <div class="story-header" onclick="toggleStory('story-3-2')">
+                        <div class="story-title">
+                            <span class="story-name">Admins/Gärtner verwalten</span>
+                            <span class="story-points">3 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als App-Betreiber möchten wir bequem aus der App heraus neue Admin- und Gärtner-Konten erstellen und löschen können, um die Verwaltung einfacher zu machen
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Es gibt einen "Root"-Admin-Account</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nur Admins können neue Admin- und Gärtner-Accounts erstellen und diese wieder entfernen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Der Root-Admin ist nicht löschbar, sodass immer ein Admin-Account zur Verfügung steht</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins sehen eine "Rollen verwalten"-Seite, auf der sie neue Admins und Gärtner erstellen können und existierende Admins/Gärtner löschen können</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admin/Gärtner-Accounts werden angelegt mit Vorname, Nachname, Email und Passwort sowie ihrer Rolle</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins und Gärtner können ihre Adresse selbst im Profil hinzufügen/bearbeiten, müssen dies aber nicht</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Der Ersteller vergibt das initiale Passwort des neuen Admins/Gärtners, es kann aber vom neuen Admin/Gärtner in deren Profil geändert werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Accounts können über eine Eingabemaske entsprechend der "Registrieren"-Seite erstellt werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins sehen eine Liste aller existierenden Admin- und Gärtner-Accounts auf der "Rollen verwalten"-Seite</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Klickt man auf den X-Button, wird ein Popup angezeigt, welches nachfragt, ob der Account gelöscht werden soll. Wird ja ausgewählt, wird der ausgewählte Account gelöscht.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Der Root-Admin kommt nicht in dieser Liste vor</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Liste kann mithilfe einer Suchfunktion nach Namen durchsucht werden</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-3">
+                    <div class="story-header" onclick="toggleStory('story-3-3')">
+                        <div class="story-title">
+                            <span class="story-name">Events hinzufügen</span>
+                            <span class="story-points">3.5 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Admin möchte ich in der App direkt neue Events hinzufügen können, um mir die Pflege der App/Datenbank zu erleichtern
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Die Hinzufügen-Funktion steht nur Admins zur Verfügung und ist für Besucher und Gärtner nicht sichtbar</li>
+                                
+                                
+                                
+                                <li class="criteria-item struck">Ein Button "Event hinzufügen" auf der "Events"-Seite öffnet eine neue Seite mit Eingabemasken für ein neues Event</li>
+                                
+                                
+                                
+                                <li class="criteria-item">In der Mitte der Navigationsleiste gibt es einen Button, der die Seite "Neues Event hinzufügen" öffnet.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Eingabemaske enthält Inputfelder für Titel, Startdatum, Enddatum (beide über Kalender-Picker) und die Beschreibung als HTML.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Zusätzlich kann über einen browse-Button ein Bild hochgeladen werden.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Der Ort des Events kann über eine interaktive Karte ausgewählt werden (der ausgewählte Marker wird farbig hervorgehoben und der Name es Orts unter der Karte ausgegeben)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Hinzufügen eines neuen Events über Button fügt das Event in die Datenbank ein</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-4">
+                    <div class="story-header" onclick="toggleStory('story-3-4')">
+                        <div class="story-title">
+                            <span class="story-name">Events bearbeiten</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Admin möchte ich in der App direkt existierende Events bearbeiten können, um mir die Pflege der App/Datenbank zu erleichtern
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Die Bearbeitungs-Features stehen nur Admins zur Verfügung und sind für Besucher und Gärtner nicht sichtbar</li>
+                                
+                                
+                                
+                                <li class="criteria-item struck">Ein Button "Event hinzufügen" öffnet eine neue Seite mit Eingabemasken für ein neues Event </li>
+                                
+                                
+                                
+                                <li class="criteria-item">Admins können auf ein Event in der Liste klicken und werden wie andere Benutzer auf die Event-Detail-Seite weitergeleitet. Statt dem Ticket-Kaufen-Button wird hier ein Bearbeiten-Button angezeigt, der auf eine "Event bearbeiten" Seite führt.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Alternativ leitet ein Bearbeiten-Button neben jedem Event in der Liste direkt zur Seite weiter.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Seite ist bereits mit den existierenden Daten vorausgefüllt. Alle Daten können abgeändert werden (anderes Bild auswählen, anderes Start- und Enddatum etc.).</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Location des Events wird auf einer kleinen Karte angezeigt, andere Locations können über die Karte ausgewählt werden.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Speichern der Änderung aktualisiert die Datenbank</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>weniger Aufwand aufgrund von User Story "Events hinzufügen"</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-5">
+                    <div class="story-header" onclick="toggleStory('story-3-5')">
+                        <div class="story-title">
+                            <span class="story-name">Grünes Telefon</span>
+                            <span class="story-points">2.5 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich direkt aus der App heraus die Pflanzenberatung der Mainau ("Grünes Telefon") nutzen können, um Hinweise zu meinen Pflanzen-Problemen zu bekommen.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Es gibt eine "Grünes Telefon"-Seite</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die "Grünes Telefon"-Seite ist über die Navigationsleiste für Besucher und Gärtner erreichbar</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für nicht angemeldete Nutzer ist die Seite nicht sichtbar (Weiterleitung auf Login)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Seite enthält ein FAQ mit den häufigsten Fragen </li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das FAQ sowie die einzelnen Fragen können über Buttons aus-/eingeklappt werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Für Besucher gibt es die Möglichkeit, eigene Fragen zu stellen. Dazu gibt es ein Formular bestehend aus Betreff, Fragetext, Dropdown-Menü für das Thema der Frage und einem Button, der die Frage abschickt.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Es gibt eine Seite, auf der ein Benutzer seine bereits gestellten Fragen sowie die erhaltenen Antworten auf der Seite anschauen kann</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Chats zu gestellten Fragen werden nur als Betreff angezeigt, ein Benutzer kann auf diese klicken, um auf den zugehörigen Chat zu kommen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Ein Besucher kann keine Fragen von anderen Besuchern sehen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die gestellten Fragen eines Nutzers sind anti-chronologisch nach Fragezeitpunkt aufgelistet (zuletzt gestellte Frage oben)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Ein visueller Indikator macht es für den Besucher direkt ersichtlich, ob eine Frage schon eine Antwort hat</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Gärtner können offene Fragen beantworten (s. User-Story "Fragen beantworten") und das FAQ editieren (s. User-Story "FAQ bearbeiten")</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Seite enthält alternativ auch noch die Email, die Telefonnummer und die Location auf der Insel (auf einer kleinen Karte) des Grünen Telefons</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-6">
+                    <div class="story-header" onclick="toggleStory('story-3-6')">
+                        <div class="story-title">
+                            <span class="story-name">Grünes Telefon: Chat/Rückfragen</span>
+                            <span class="story-points">1.5 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich auf die Antworten der Gärtner reagieren können, z.B. mit Rückfragen, falls vorhanden, oder auch, um den Gärtnern zu danken.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Jede gestellte Frage (eine Konversation, die durch das Stellen der initialen Frage über das Formular erzeugt wurde) ist als ein Chat implementiert</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Ein Chat ist nur für den besitzenden Nutzer sichtbar sowie den Gärtner, der die initiale Frage zuerst beantwortet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Neue initiale Fragen sind weiterhin für alle Gärtner sichtbar</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Im Chat können Nutzer und Gärtner beliebig viele Nachrichten in beliebiger Reihenfolge schreiben</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Jede Nachricht ist mit der Uhrzeit versehen, an der sie verfasst wurde, die Nachrichten sind wie in bekannten Chat-Applikationen danach geordnet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Nachrichten sind visuell (durch unterschiedliche Farben und Alignments auf der Seite) aufgetrennt in Nachrichten von sich selbst und dem Chatpartner</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Chats sind scrollable, sollten sie zu lange für eine Seite werden</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>(geringerer Aufwand wegen User Story "Grünes Telefon"). + 3 Punkte falls Nachrichten in "Echtzeit" verschickt werden, siehe Kundenanmerkung</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-7">
+                    <div class="story-header" onclick="toggleStory('story-3-7')">
+                        <div class="story-title">
+                            <span class="story-name">Fragen beantworten</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Gärtner muss ich die Fragen der Besucher beantworten können, um ihnen mit ihren Problemen helfen zu können.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Gärtner bekommen auf der "Grünes Telefon"-Seite die noch offenen Fragen aller Besucher aufgelistet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Fragen werden chronologisch (älteste zuerst) angezeigt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Fragen können nach ihrem Thema gefiltert werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Fragen können beantwortet werden indem sie angeklickt werden, was ein Textfeld dazu öffnet und einen Button, der die Antwort abschickt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die geschickte Antwort wird dem Fragesteller auf seiner Ansicht der Seite angezeigt</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-8">
+                    <div class="story-header" onclick="toggleStory('story-3-8')">
+                        <div class="story-title">
+                            <span class="story-name">FAQ bearbeiten</span>
+                            <span class="story-points">1.5 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Gärtner möchte ich das FAQ bearbeiten können (neue Fragen hinzufügen, Texte bearbeiten, alte Fragen entfernen), damit ich nicht immer dieselben Fragen beantworten muss (und die Besucher schneller Antworten auf typische Fragen bekommen können).
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Ein Gärtner kann auf der "Grünes Telefon"-Seite das FAQ sehen und bearbeiten</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Über einen Button können neue Fragen mit Antwort zum FAQ hinzugefügt werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Antworten dürfen nicht leer sein</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Existierende Fragen können über einen Button bearbeitet  - es öffnen sich Textfelder mit dem aktuellen Text - und gespeichert werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Existierende Fragen können über einen Button aus dem FAQ entfernt werden</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>Optional</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-9">
+                    <div class="story-header" onclick="toggleStory('story-3-9')">
+                        <div class="story-title">
+                            <span class="story-name">Mehrere Tickets für ein Event kaufen</span>
+                            <span class="story-points">0.5 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich beliebig viele Tickets für ein Event auf einmal kaufen können. Ich möchte Tickets für ein Event nachkaufen können, für das ich bereits Tickets besitze.Des Weiteren möchte ich als User meine schon besuchten Events auf der Ticketseite einblenden können.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Die Detail-Seite eines Events enthält einen "Tickets buchen"-Button (nicht mehr "1 Ticket kaufen"), der auf die Ticket-Buchen-Seite weiterleitet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Auf der Ticket-Buchen-Seite kann über Buttons ausgewählt werden, wie viele Tickets benötigt werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Ticket-Buchen- und Bezahlen-Seiten zeigen die Anzahl der gewählten Tickets und den entsprechenden Gesamtpreis an</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Gekaufte-Tickets-Seite zeigt für ein gekauftes Event an, wie viele Tickets dafür gekauft wurden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Das Kaufen weiterer Tickets für ein bereits gekauftes Event addiert die Ticketanzahlen auf der Gekaufte-Tickets-Seite</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-10">
+                    <div class="story-header" onclick="toggleStory('story-3-10')">
+                        <div class="story-title">
+                            <span class="story-name">Beliebige Ticketkategorien für Events</span>
+                            <span class="story-points">3 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Event-Anbieter (Mainau GmbH) möchten wir in der App verschiedene Ticketkategorien für jedes Event anbieten können, um an die Events angepasste Tickets verkaufen zu können.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Für ein Event kann ein Ticket in verschiedenen Kategorien gekauft werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Eine Ticketkategorie besteht aus einem Namen und einem Preis</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Ticketkategorien können vom Betreiber definiert werden -> Admins können beim Bearbeiten/Hinzufügen von Events beliebig Ticketkategorien erstellen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Jedes Event kann für sich eigene Kategorien haben, Kategorienamen sind beliebig (z.B. 'VIP', 'Stehplatz', 'Kind', 'Erwachsener', 'Gäste mit Behinderung' etc.)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Auf der Ticket-Buchen-Seite kann ausgewählt werden, welches Ticketkategorie benötigt wird.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Wahl der Ticketkategorie wird beim Bezahlvorgang angezeigt und der Preis entsprechend dargestellt.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Gekaufte-Tickets-Seite zeigt für jedes Event alle Kategorien mit Anzahl an, die für dieses Event gekauft wurden</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-11">
+                    <div class="story-header" onclick="toggleStory('story-3-11')">
+                        <div class="story-title">
+                            <span class="story-name">Event Favouriten</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich, das ich bestimmte Events durch einen Stern markieren kann, die mich besonders interessieren. Bei Bedarf kann ich nur diese anzeigen lassen, um einen guten Überblick über meine Lieblingsevents zu behalten.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Jedes Event besitzt anfangs einen grauen Stern, der durch Anklicken gesetzt werden kann. Damit hat das Event den Typ "Favorit"</li>
+                                
+                                
+                                
+                                <li class="criteria-item struck">Durch erneutes Klicken auf den Stern kann ein Event von der Liste der Favoriten entfernt werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Wird der Stern erneut ausgewählt, erhält der Benutzer Feedback in Form eines Popups, in dem nachgefragt wird, ob das Event wirklich aus der Liste der Favouriten entfernt werden soll. Bei Bestätigung verschwindet das Event aus der angezeigten Liste.</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Events vom Typ "Favourit" können ebenfalls gefiltert werden</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-12">
+                    <div class="story-header" onclick="toggleStory('story-3-12')">
+                        <div class="story-title">
+                            <span class="story-name">Automatisches Testing via Gitlab CI/CD</span>
+                            <span class="story-points">2 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Quality Manager möchte ich, dass bei jeder gepushten Änderung des Source Code automatisiert überprüft wird, ob noch alles funktioniert, um schwere Fehler vorzubeugen.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Es existiert eine Pipeline auf Gitlab, die bei jedem Commit ausgeführt wird</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Pipeline baut das ganze Projekt und führt alle spezifizierten Backend-Tests automatisch aus</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die Pipeline informiert den Entwickler darüber, wenn seine Änderungen die Tests nicht passieren</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-13">
+                    <div class="story-header" onclick="toggleStory('story-3-13')">
+                        <div class="story-title">
+                            <span class="story-name">Abgelaufene Tickets</span>
+                            <span class="story-points">- SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als Benutzer möchte ich mir meine abgelaufenen Tickets anschauen und bei Bedarf auch ausblenden können.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Tickets Seite enthält eine "Abgelaufene Tickets anzeigen" Checkbox</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Abgelaufene Tickets werden dadurch ein und ausgeblendet</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Abgelaufene Tickets sind ausgegraut und werden unterhalb der noch aktuellen Tickets angezeigt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Durch anklicken eines der abgelaufenen Tickets gelangt man ebenfalls zur Detailseite des jeweiligen Events, kann dort jedoch kein Ticket erwerben.</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-14">
+                    <div class="story-header" onclick="toggleStory('story-3-14')">
+                        <div class="story-title">
+                            <span class="story-name">Kategorisierung der Attraktionen</span>
+                            <span class="story-points">1 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich auf der Karte sehen können, um was für einen Typ von Attraktion es sich bei einem Marker handelt. Außerdem würde ich gerne zwischen diesen Typen wechseln können und nur Attraktionen dieses Typs anschauen können.Das soll mir helfen, schneller die richtigen Locations auf der Insel zu finden.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Attraktionen sind entweder vom Typ "Pflanzen", "Verpflegung", "Gebäude" oder "Sonstige"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Auf der Karte gibt es ein Kontroll-Overlay, mit dem ausgewählt werden kann, welche Typen von Attraktionen angezeigt werden sollen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Es werden immer nur die Marker angezeigt, die zu Attraktionen der ausgewählten Typen korrespondieren</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Attraktionen zu zwei Kategorien? (Anmerkung Kunde: Überbleibsel)</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-15">
+                    <div class="story-header" onclick="toggleStory('story-3-15')">
+                        <div class="story-title">
+                            <span class="story-name">Anzeige des Blumenjahrs</span>
+                            <span class="story-points">- SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich in der App sehen welche Pflanzen aktuell blühen und welche in anderen Monaten blühen (so wie auf der Mainau Website: https://www.mainau.de/de/blumenjahr.html)
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Es gibt eine Blumenjahr Seite</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Man kann sie entweder durch Navigationsleiste oder über die Einbettung des Grünen Telefons erreichen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Dort sieht man welche Pflanzen im aktuellen Monat blühen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Über einen Button kann man auf eine Übersicht gelangen, auf der alle Monaten aufgelistet sind</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Wenn man auf einen Monat in der Jahresübersicht drückt kann man im Detail sehen was im ausgewählten Monat für Pflanzen blühe</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>Reject - Wenig bis kein Programmieraufwand.</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-16">
+                    <div class="story-header" onclick="toggleStory('story-3-16')">
+                        <div class="story-title">
+                            <span class="story-name">Event Empfehlung von Events</span>
+                            <span class="story-points">- SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich, das mir ähnliche Events zu meinem ausgewählten Event vorgeschlagen werden, die mir auch gefallen könnten.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Auf der jeder Eventseite werden bis zu 3 zufällige Events aus der selben Kategorie angezeigt</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Nutzer*innen können die für sie vorgeschlagenen Events anklicken um weiter Informationen zu diesem Events zu erhalten oder diese zu buche</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>0.5 (random) / 2 (ähnlichkeitsbasiert)</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-3-17">
+                    <div class="story-header" onclick="toggleStory('story-3-17')">
+                        <div class="story-title">
+                            <span class="story-name">Events filtern und Kategorien</span>
+                            <span class="story-points">- SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> Als User möchte ich die Liste der Events nach bestimmten Kategorien filtern können, um so schneller einen Überblick über die Typen von Events zu erhalten, die mich interessieren.Dabei möchte ich nach verschiedenen Themen filtern und nach Preis oder Datum sortieren können.Zwischen den einzelnen Typen möchte ich wechseln und nur Events dieses Typs anschauen können.Das soll mir helfen, nur diese Events durchsuchen zu können, die mich interessieren.
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Events sind entweder von der Kategorie "Musik", "Essen", "Ausstellung" oder "Sonstige"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Über Liste der Events gibt es einen Button "Erweiterte Suche"</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Beim Anklicken fahren Auswahlfelder aus, in denen gewählt werden kann, nach was gefiltert werden soll und in welcher Sortierung die Events aufgelistet werden sollen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Die erweiterte Suche erlaubt das Filtern nach bestimmten Kategorien, Datum, Preis und Titel</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Es ist möglich alle oder mehrere Kategorien gleichzeitig auszuwählen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Es werden immer nur die Events angezeigt, die den ausgewählten Suchkriterien entsprechen</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Events können auf- oder absteigend nach Preis oder Datum sortiert werden</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Standartmäßig werden alle Events angezeigt und diese nach Datum in sortiert, sodass die Events, die als nächstes anstehen, weiter oben aufgelistet sind</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>2 ("einfache" Filter) / 3 ("komplexe" Filter)</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="sprint" id="sprint-4">
+            <div class="sprint-header" onclick="toggleSprint('sprint-4')">
+                <h2>Verbesserungen & Testen</h2>
+                <div class="sprint-points">
+                    
+                    
+                    
+                    <span>Produktpunkte: 10</span>
+                    
+                    
+                    <span>Software Engineering: 3</span>
+                    
+                </div>
+            </div>
+            <div class="sprint-content">
+                
+                <div class="user-story" id="story-4-1">
+                    <div class="story-header" onclick="toggleStory('story-4-1')">
+                        <div class="story-title">
+                            <span class="story-name">Refactoring</span>
+                            <span class="story-points">- SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> 
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Objektorientiere Programmierung</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Verwendung von Software Design Patterns (bitte im Projekt Wiki erwähnen!)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Integration von Unit Tests (benötigt manchmal auch ein Refactoring da ansonsten Teile des Codes nicht getestet werden können)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Code ausreichend dokumentiert und "einfach" zu verstehen</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Software Projekt Anforderung:</div>
+                            <div>Das Refactoring des Codes wird normalerweise während des Entwicklungsprozesses immer wieder durchgeführt. Das Integrieren von neuen Funktionen erfordert immer wieder auch die Überarbeitung der Projektstruktur. Dadurch bleibt der Code verständlich, lesbar und erweiterbar. Das heißt zukünftige Funktionen können in der gleichen Geschwindigkeit integriert werden. Ansonsten würde die Integration neuer Funktionen immer langsamer werden. An dieser Stelle möchten wir Sie erinnern dass in diesem letzten Sprint ein guter Zeitpunkt ist die Projektstruktur zu überarbeiten da auch die Abgabe kurz danach bevorsteht.</div>
+                        </div>
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Punktzahl Hinweis:</div>
+                            <div>Basierend auf finaler Code Qualität</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="user-story" id="story-4-2">
+                    <div class="story-header" onclick="toggleStory('story-4-2')">
+                        <div class="story-title">
+                            <span class="story-name">Testing</span>
+                            <span class="story-points">3 SP</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-description">
+                            <strong>User Story:</strong> 
+                        </div>
+
+                        
+                        <div class="criteria-section">
+                            <div class="criteria-title">Akzeptanzkriterien:</div>
+                            <ul class="criteria-list">
+                                
+                                
+                                <li class="criteria-item">Eine Backend Komponente des Projekt wird vollständig getestet (z.B. Authentication & Authorization)</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Keine Frontend Tests</li>
+                                
+                                
+                                
+                                <li class="criteria-item">Bonuspunkte falls die Tests automatisch via einer "Continuous Integration" Pipeline durchgeführt werden (d.h. die Tests werden automatisch auf GitLab ausgeführt - ein GitLab Runner kann zur Verfügung gestellt werden)Siehe Video zu Unit Testin</li>
+                                
+                                
+                            </ul>
+                        </div>
+                        
+
+                        
+
+                        
+                        <div class="dev-hint">
+                            <div class="dev-hint-title">Software Projekt Anforderung:</div>
+                            <div>Durch die Integration von Unit Tests können Komponenten eines Software Projekts automatisiert getestet werden. Dadurch kann direkt bei der Implementierung überprüft werden ob der geschriebene Code auch wie vorgesehen (das heißt auch für alle möglichen Sonderfälle) funktioniert. Außerdem kann im weiteren Verlauf des Projekts jederzeit überprüft werden ob bereits existierende Komponenten des Projekts weiterhin ordnungsgemäß funktionieren. Die Implementierung neuer Funktionen kann dazu führen, dass bereits existierende Komponenten nicht mehr ordnungsgemäß funktionieren. Durch das Ausführen von Tests werden neue Fehler frühzeitig entdeckt.Normalerweise wird in Scrum in der "Definition of Done" festgelegt welche Funktionen getestet werden müssen bevor sie als erledigt (Done) gelten (Zum Beispiel Backend Funktionen/API Endpoints). In dieser Lehrveranstaltung führen wir Tests erst spät ein und erwarten daher auch nicht dass der gesamte Code getestet wird.</div>
+                        </div>
+                        
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleSprint(sprintId) {
+            const sprint = document.getElementById(sprintId);
+            sprint.classList.toggle('expanded');
+        }
+
+        function toggleStory(storyId) {
+            const story = document.getElementById(storyId);
+            story.classList.toggle('expanded');
+        }
+
+        function toggleAll() {
+            const sprints = document.querySelectorAll('.sprint');
+            const stories = document.querySelectorAll('.user-story');
+
+            const allExpanded = Array.from(sprints).every(sprint => sprint.classList.contains('expanded'));
+
+            sprints.forEach(sprint => {
+                if (allExpanded) {
+                    sprint.classList.remove('expanded');
+                } else {
+                    sprint.classList.add('expanded');
+                }
+            });
+
+            stories.forEach(story => {
+                if (allExpanded) {
+                    story.classList.remove('expanded');
+                } else {
+                    story.classList.add('expanded');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

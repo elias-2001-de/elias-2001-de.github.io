@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Explorer - Angular App Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button onclick="window.history.back()"
+            style="position: fixed; left: 20px; top: 20px; width: 50px; height: 50px; border-radius: 50%; border: none; background: rgba(0,0,0,0.7); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; backdrop-filter: blur(10px); transition: all 0.3s ease;"
+            onmouseover="this.style.background='rgba(0,0,0,0.9)'; this.style.transform='scale(1.1)'"
+            onmouseout="this.style.background='rgba(0,0,0,0.7)'; this.style.transform='scale(1)'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <div class="hero">
+            <h1>🏝️ Island Explorer</h1>
+        </div>
+
+        <div class="main-content">
+            <div class="info-section">
+
+
+                <h2>📱 Über das Projekt</h2>
+
+                <p><strong>Island Explorer</strong> ist eine fiktive App für die <a href="https://www.mainau.de/de"
+                        target="_blank" style=" color: inherit;"> <strong>Blumeninsel
+                            Mainau</strong></a> im Bodensee.
+                    Das Projekt entstand im 4. Semester im Rahmen des <strong>Softwareprojekts</strong>. Entwickelt
+                    wurde es von einem
+                    <strong>6-köpfigen Team</strong> mit agiler Methode.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⚠️ Mock-Version Hinweis</h4>
+                    <p><strong>Dies ist nur ein Mock/Stub ohne Backend!</strong> Viele Funktionen (wie Registrierung,
+                        Datenbank-Operationen, Payment-System, Server-APIs) funktionieren in dieser Browser-Demo nicht,
+                        da sie ein vollständiges Backend benötigen.</p>
+                    <p>Für die <strong>vollständige funktionsfähige Version</strong> mit Backend siehe: <a
+                            href="#installation" class="highlight-link">💻 Installation & Vollversion</a></p>
+                </div>
+
+                <div class="login-section">
+                    <h3>🚀 App ausprobieren</h3>
+                    <p>Teste die verschiedenen Nutzerrollen mit folgenden Accounts (Passwort für alle:
+                        <strong>testtest</strong>):
+                    </p>
+
+                    <div class="cta-login">
+                        <h4>⚡ Schnellstart</h4>
+                        <div class="quick-access">
+                            <div class="credentials highlight">testuser@mail.com</div>
+                            <div class="credentials highlight">gaertner@mainau.de</div>
+                            <div class="credentials highlight">Passwort: testtest</div>
+                        </div>
+                    </div>
+
+                    <div class="user-roles">
+                        <div class="role-card">
+                            <h4>👥 Besucher</h4>
+                            <div class="credentials">lucy@mail.com</div>
+                            <div class="credentials">testuser@mail.com</div>
+                            <p><small>Kann Events buchen und Fragen stellen</small></p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>🛡️ Root-Admin</h4>
+                            <div class="credentials">admin@mainau.de</div>
+                            <p><small>Vollzugriff auf alle Funktionen</small></p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>⚙️ Administratoren</h4>
+                            <div class="credentials">elias.admin@mainau.de</div>
+                            <div class="credentials">nicolas.admin@mainau.de</div>
+                            <div class="credentials">jonathan.admin@mainau.de</div>
+                            <div class="credentials">cedric.admin@mainau.de</div>
+                            <p><small>Event-Verwaltung und User-Management</small></p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>🌱 Gärtner</h4>
+                            <div class="credentials">gaertner@mainau.de</div>
+                            <div class="credentials">paulina.gaertner@mainau.de</div>
+                            <div class="credentials">robin.gaertner@mainau.de</div>
+                            <p><small>FAQ-Betreuung und Chat-Support</small></p>
+                        </div>
+                    </div>
+                    <p><small>Die anmeldungs Daten sind für die vollständige Version identisch</small></p>
+                </div>
+
+                <div class="team-section">
+                    <h3>👥 Entwicklungsteam</h3>
+                    <p>Entwickelt von einem <strong>6-köpfigen Team</strong> mit <strong>Scrum</strong> in 4 Sprints als
+                        <strong>Universitätsprojekt</strong>:
+                    </p>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <strong>Frontend:</strong> Lucia Schopper, Jonathan Häßler, Paulina Leutloff
+                        </div>
+                        <div class="team-member">
+                            <strong>Backend:</strong> Elias Maier, Nicolas Luckert
+                        </div>
+                        <div class="team-member">
+                            <strong>APIs:</strong> Robin Erb
+                        </div>
+                    </div>
+                    <p><strong>Betreut von:</strong> Cedric Wiese (Product Owner) & Sebastian Hubenschmid (Kunde)</p>
+                </div>
+
+                <div class="product-section">
+                    <h3>🔗 Projektdokumentation</h3>
+                    <p>Detaillierte Informationen zu Entwicklungsprozess und Architektur:</p>
+                    <a href="./user_stories/index.html" class="link-placeholder">📋 User Stories & Sprint-Planung</a>
+                    <a href="./architecture/index.html" class="link-placeholder">🏗️ Design Patterns & Architektur</a>
+                    <a href="https://github.com/elias-2001-de/swp-2023-gruppe-02" class="link-placeholder"
+                        target="_blank">💻 GitHub Repository</a>
+                    <a href="./design/index.html" class="link-placeholder">🎨 Design Vorgaben</a>
+                </div>
+
+                <div class="tech-stack">
+                    <h3>🛠️ Technologie-Stack</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Material Design</span>
+                        <span class="tech-tag">Leaflet (OpenStreetMap)</span>
+                        <span class="tech-tag">Sequelize</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Node</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Postgres</span>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3>✨ Hauptfunktionen</h3>
+                    <ul class="features-list">
+                        <li>Multi-User-System mit verschiedenen Rollen (Besucher, Admin, Gärtner)</li>
+                        <li>Event-Management und Ticket-Buchungssystem</li>
+                        <li>Interaktive Karten mit Leaflet</li>
+                        <li>FAQ und Chat-System ("Grünes Telefon")</li>
+                        <li>Vollständig im Browser lauffähig</li>
+                    </ul>
+                </div>
+
+                <div class="installation-section" id="installation">
+                    <h3>💻 Installation & Vollversion</h3>
+                    <p><strong>Diese Demo ist nur ein Mock/Stub ohne Backend.</strong> Die vollständige
+                        Entwicklungsversion mit funktionierendem Backend und allen Features ist verfügbar auf:</p>
+
+                    <div class="github-info">
+                        <a href="https://github.com/elias-2001-de/swp-2023-gruppe-02" class="github-link"
+                            target="_blank">
+                            📦 GitHub Repository
+                        </a>
+                    </div>
+
+                    <h4>🚀 Installation der Vollversion:</h4>
+                    <div class="copy-container">
+                        <div class="build-info" id="install-commands">
+                            # Repository klonen<br>
+                            git clone https://github.com/elias-2001-de/swp-2023-gruppe-02.git<br>
+                            cd swp-2023-gruppe-02<br><br>
+                            # Mit Docker Compose starten<br>
+                            docker compose up<br><br>
+                            # Die App ist dann verfügbar unter:<br>
+                            # http://localhost:4200 (Frontend)<br>
+                            # http://localhost:3000 (Backend-API)
+                        </div>
+                        <button class="copy-btn" onclick="copyInstallCommands()">
+                            <svg viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 8.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                                </path>
+                                <path
+                                    d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                                </path>
+                            </svg>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="phone-demo">
+                <div class="iphone-frame">
+                    <div class="iphone-notch"></div>
+                    <div class="iphone-screen">
+                        <iframe src="/assets/island-explorer/" class="app-frame" title="Island Explorer App Demo">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function copyInstallCommands() {
+            const commands = `git clone https://github.com/elias-2001-de/swp-2023-gruppe-02.git
+cd swp-2023-gruppe-02
+docker compose up`;
+
+            navigator.clipboard.writeText(commands).then(function () {
+                const btn = document.querySelector('.copy-btn');
+                const textSpan = btn.querySelector('.copy-text');
+                const svg = btn.querySelector('svg');
+
+                // Change to check icon
+                svg.innerHTML = '<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>';
+                textSpan.textContent = 'Copied!';
+                btn.classList.add('copied');
+
+                setTimeout(function () {
+                    svg.innerHTML = '<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 8.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>';
+                    textSpan.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 1000);
+            }).catch(function (err) {
+                console.error('Fehler beim Kopieren: ', err);
+                // Fallback für ältere Browser
+                const textArea = document.createElement('textarea');
+                textArea.value = commands;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                const btn = document.querySelector('.copy-btn');
+                const textSpan = btn.querySelector('.copy-text');
+                const svg = btn.querySelector('svg');
+
+                svg.innerHTML = '<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>';
+                textSpan.textContent = 'Copied!';
+                btn.classList.add('copied');
+
+                setTimeout(function () {
+                    svg.innerHTML = '<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 8.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>';
+                    textSpan.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+
+</html>

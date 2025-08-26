@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Diagramme</title>
+    <script src="/assets/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .diagram-container {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .diagram-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .mermaid {
+            text-align: center;
+            background: white;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .intro {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2196F3;
+        }
+
+        .design-patterns {
+            background: #f3e5f5;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #9C27B0;
+        }
+
+        .design-patterns h2 {
+            margin-top: 0;
+            color: #7B1FA2;
+            border: none;
+            padding: 0;
+        }
+
+        .pattern {
+            background: white;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #E1BEE7;
+        }
+
+        .pattern h3 {
+            margin-top: 0;
+            color: #7B1FA2;
+            font-size: 1.1em;
+        }
+
+        .section-intro {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 3px solid #FF9800;
+            font-size: 0.95em;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d32f2f;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #2E7D32;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 8px 0;
+            padding: 5px 0;
+        }
+
+        .toc a {
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.history.back()"
+        style="position: fixed; left: 20px; top: 20px; width: 50px; height: 50px; border-radius: 50%; border: none; background: rgba(0,0,0,0.7); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; backdrop-filter: blur(10px); transition: all 0.3s ease;"
+        onmouseover="this.style.background='rgba(0,0,0,0.9)'; this.style.transform='scale(1.1)'"
+        onmouseout="this.style.background='rgba(0,0,0,0.7)'; this.style.transform='scale(1)'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+        </svg>
+    </button>
+    <div class="container">
+        <h1>Software Engineering Modelle - Sprint 3</h1>
+
+        <div class="intro">
+            <p>Auf dieser Seite sind die relevanten Software Engineering Modelle zum Ende von Sprint 3 (Sonntag
+                02.07.2023) hinterlegt.
+                Die Modelle zeigen sowohl den derzeitigen Stand des Projektes auf als auch den geplanten, verbesserten
+                Stand,
+                der in Sprint 4 als Teil des Refactoring durchgeführt wird.</p>
+        </div>
+
+        <div class="design-patterns">
+            <h2>Verwendete Design Patterns</h2>
+            <p>Im Projekt wurden mindestens <strong>2</strong> Program Design Patterns <strong>sinnvoll</strong>
+                verwendet:</p>
+
+            <div class="pattern">
+                <h3>Pattern 1: Singleton</h3>
+                <p><strong>Verwendet in:</strong> <code>backend/src/tables/&lt;...&gt;Table.ts</code></p>
+                <p><strong>Zweck:</strong> In allen Datenbank-Klassen haben wir das Singleton Pattern verwendet.
+                    Der Constructor wurde auf private gestellt und eine statische Instanz der Klasse wird in ihr selbst
+                    gespeichert.
+                    Dies verhindert, dass von einer Datenbank-Tabelle zwei Modelle über Sequelize erstellt werden
+                    können.
+                    Da es stets nur eine Tabelle desselben Namens/Typs gibt, ist es sinnvoll, auch nur ein Modell davon
+                    im Code erstellen zu können.</p>
+            </div>
+
+            <div class="pattern">
+                <h3>Pattern 2: Strategy</h3>
+                <p><strong>Verwendet in:</strong> <code>backend/src/controllers/PaymentController.ts</code> und
+                    <code>backend/src/payment</code>
+                </p>
+                <p><strong>Zweck:</strong> Der <code>PaymentController</code> stellt den Kontext des Strategy-Patterns
+                    dar,
+                    während die abstrakte Klasse <code>PaymentService</code> das Interface für die Zahlungsstrategien
+                    (<code>BachelorCardService</code>, <code>HCIPalService</code>, <code>SWPSafeService</code>) bietet.
+                    Die Verwendung des Patterns erlaubt es uns, den Prozess von <code>buyTicket</code> zu abstrahieren
+                    und nur das
+                    tatsächliche Ausführen der Zahlung für jeden Zahlungsanbieter separat implementieren zu müssen.</p>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>Inhaltsverzeichnis</h3>
+            <ul>
+                <li><a href="#class-diagrams">Klassendiagramme (Backend)</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#authentication-user">Authentication User</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#chat">Chat</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#event-location">Event Location</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#faq-und-about-controller">Faq Und About Controller</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#payment-system">Payment System</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#ticketing-favorites">Ticketing Favorites</a></li>
+                
+                <li><a href="#sequence-diagrams">Sequenzdiagramme (Frontend)</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#passwort-bearbeiten">Passwort Bearbeiten</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#passwort-bearbeiten-vereinfacht">Passwort Bearbeiten Vereinfacht</a></li>
+                
+                <li style="margin-left: 20px;"><a href="#zahlungsprozess">Zahlungsprozess</a></li>
+                
+            </ul>
+        </div>
+
+        <section id="class-diagrams">
+            <h2>Backend Class Diagrams</h2>
+            <div class="section-intro">
+                <p><strong>Ist-Zustand:</strong> Diese Diagramme modellieren den aktuellen Zustand des Backend-Projekts.
+                    Die Dateien <code>app.ts</code> und <code>server.ts</code> wurden außenvorgelassen, da es sich
+                    hierbei nicht um Klassen handelt.</p>
+
+                <p><strong>Soll-Zustand:</strong> Die Verbesserungsideen belaufen sich hauptsächlich auf konsistentere
+                    Benennung von Methoden und Variablen.
+                    Die Struktur mit klarer Trennung (separation of concerns) von Datenbanktabellen
+                    (<code>...Table</code>),
+                    Request-Handling (<code>...Controller</code>) und API-Definition (<code>app.ts</code>) hat sich
+                    bewährt.</p>
+            </div>
+            
+            <div class="diagram-container" id="authentication-user">
+                <div class="diagram-title">Authentication User</div>
+                <div class="mermaid">
+                    classDiagram
+    %% Authentication and User Management Controllers
+    class AuthController {
+        -userTable: UserTable
+        -sessionTable: SessionTable
+        +constructor(userTable: UserTable, sessionTable: SessionTable): AuthController
+        +authorize(req: Request, res: Response, next: NextFunction): Promise~void~
+        +adminsOnly(req: Request, res: Response, next: NextFunction): void
+        +visitorsOnly(req: Request, res: Response, next: NextFunction): void
+        +staffOnly(req: Request, res: Response, next: NextFunction): void
+        +login(req: Request, res: Response): Promise~void~
+        -loginInternal(email: string, password: string): Promise~object~
+        +register(req: Request, res: Response): Promise~void~
+        +getAuth(req: Request, res: Response): Promise~void~
+        +logout(req: Request, res: Response): void
+        +checkPassword(req: Request, res: Response): Promise~void~
+    }
+
+    class UserController {
+        -userTable: UserTable
+        -sessionTable: SessionTable
+        +constructor(userTable: UserTable, sessionTable: SessionTable): UserController
+        +updateUser(req: Request, res: Response): Promise~void~
+        +deleteUser(req: Request, res: Response): Promise~void~
+        +getUser(req: Request, res: Response): Promise~void~
+        +getStaff(req: Request, res: Response): Promise~void~
+        +addUser(req: Request, res: Response): Promise~void~
+    }
+
+    class UserTable {
+        -table: ModelCtor~UserModel~
+        +constructor(sequelize: Sequelize): UserTable
+        +getAllUsers(): Promise~UserModel[]~
+        +getAllStaff(): Promise~UserModel[]~
+        +getUser(email: string): Promise~UserModel~
+        +insertUser(user: UserModel): Promise~UserModel~
+        +updateUser(user: UserModel): Promise~array~
+        +deleteUser(email: string): Promise~number~
+    }
+
+    class SessionTable {
+        -table: ModelCtor~SessionModel~
+        +constructor(sequelize: Sequelize): SessionTable
+        +getAllSessions(): Promise~SessionModel[]~
+        +getSessionById(sessionId: string): Promise~SessionModel~
+        +insertSession(sessionId: string, email: string): Promise~SessionModel~
+        +deleteSession(sessionId: string): Promise~number~
+        +deleteAllSessionsByEmail(email: string): Promise~number~
+    }
+
+    class UserModel {
+        +email: string
+        +password: string
+        +postcode: number
+        +lastname: string
+        +houseNo: string
+        +city: string
+        +street: string
+        +firstname: string
+        +role: string
+    }
+
+    class SessionModel {
+        +sessionId: string
+        +email: string
+    }
+
+    %% Relationships
+    AuthController --> UserTable : uses
+    AuthController --> SessionTable : uses
+    UserController --> UserTable : uses
+    UserController --> SessionTable : uses
+    UserTable --> UserModel : creates
+    SessionTable --> SessionModel : creates
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="chat">
+                <div class="diagram-title">Chat</div>
+                <div class="mermaid">
+                    classDiagram
+    %% Chat System
+    class ChatController {
+        -conversationTable: ConversationTable
+        -messagesTable: MessagesTable
+        +constructor(conversationTable: ConversationTable, messagesTable: MessagesTable): ChatController
+        +sendMessage(req: Request, res: Response): Promise~void~
+        +getConversations(req: Request, res: Response): Promise~void~
+        +startConversation(req: Request, res: Response): Promise~void~
+        +getConversation(req: Request, res: Response): Promise~void~
+    }
+
+    class ConversationTable {
+        -table: ModelCtor~ConversationModel~
+        +constructor(sequelize: Sequelize): ConversationTable
+        +getAllConversations(): Promise~ConversationModel[]~
+        +getConversationById(id: number): Promise~ConversationModel~
+        +insertConversation(type: string, email: string): Promise~ConversationModel~
+        +getConversationsForUser(email: string): Promise~ConversationModel[]~
+    }
+
+    class MessagesTable {
+        -table: ModelCtor~MessagesModel~
+        +constructor(sequelize: Sequelize): MessagesTable
+        +getMessagesForConversation(conversation: number): Promise~MessagesModel[]~
+        +insertMessage(conversation: number, email: string, msg: string): Promise~MessagesModel~
+    }
+
+    class ConversationModel {
+        +id: number
+        +email: string
+        +type: string
+    }
+
+    class MessagesModel {
+        +id: number
+        +msg: string
+        +updatedAt: string
+        +createdAt: string
+        +email: string
+        +conversation: number
+    }
+
+    %% Relationships
+    ChatController --> ConversationTable : uses
+    ChatController --> MessagesTable : uses
+    ConversationTable --> ConversationModel : creates
+    MessagesTable --> MessagesModel : creates
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="event-location">
+                <div class="diagram-title">Event Location</div>
+                <div class="mermaid">
+                    classDiagram
+    %% Event and Location Management
+    class EventController {
+        -eventTable: EventTable
+        -locationTable: LocationTable
+        +constructor(eventTable: EventTable, locationTable: LocationTable): EventController
+        +getEvents(req: Request, res: Response): Promise~void~
+        +getEvent(req: Request, res: Response): Promise~void~
+        +editEvent(req: Request, res: Response): Promise~void~
+        +addEvent(req: Request, res: Response): Promise~void~
+        +deleteEvent(req: Request, res: Response): Promise~void~
+    }
+
+    class LocationController {
+        -locationTable: LocationTable
+        +constructor(locationTable: LocationTable): LocationController
+        +getLocations(req: Request, res: Response): Promise~void~
+        +getLocation(req: Request, res: Response): Promise~void~
+    }
+
+    class EventTable {
+        -infoTable: ModelCtor~EventModel~
+        -categoryTable: ModelCtor~TicketCategoryModel~
+        +constructor(sequelize: Sequelize): EventTable
+        +getAllEventsFull(): Promise~EventModel[]~
+        +getAllEvents(showExpired: boolean): Promise~EventModel[]~
+        +getEventById(id: number): Promise~EventModel~
+        +deleteEvent(id: number): Promise~number~
+        +deleteAllExpiredEvents(): Promise~number~
+        +insertEvent(event: EventModel): Promise~EventModel~
+        +updateEvent(event: EventModel): Promise~array~
+        +getTicketCategoriesForEvent(eventId: number): Promise~TicketCategoryModel[]~
+    }
+
+    class LocationTable {
+        -table: ModelCtor~LocationModel~
+        +constructor(sequelize: Sequelize): LocationTable
+        +getAllLocationsFull(): Promise~LocationModel[]~
+        +getAllLocations(): Promise~LocationModel[]~
+        +getLocationById(id: number): Promise~LocationModel~
+        +getLocationByName(name: string): Promise~LocationModel~
+        +deleteLocationById(id: number): Promise~number~
+        +insertLocation(location: LocationModel): Promise~LocationModel~
+        +updateLocation(location: LocationModel): Promise~array~
+    }
+
+    class EventModel {
+        +id: number
+        +title: string
+        +location: string
+        +price: number
+        +end_date: Date
+        +picture: string
+        +startDate: Date
+        +description: string
+        +description_html: string
+    }
+
+    class TicketCategoryModel {
+        +eventId: number
+        +category: string
+        +price: number
+    }
+
+    class LocationModel {
+        +id: number
+        +name: string
+        +coordinatesLat: number
+        +coordinatesLng: number
+        +description: string
+        +picture: string
+        +descriptionHtml: string
+    }
+
+    %% Relationships
+    EventController --> EventTable : uses
+    EventController --> LocationTable : uses
+    LocationController --> LocationTable : uses
+    EventTable --> EventModel : creates
+    EventTable --> TicketCategoryModel : creates
+    LocationTable --> LocationModel : creates
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="faq-und-about-controller">
+                <div class="diagram-title">Faq Und About Controller</div>
+                <div class="mermaid">
+                    classDiagram
+    %% FAQ und AboutController System
+    class FAQController {
+        -faqTable: FAQTable
+        +constructor(faqTable: FAQTable): FAQController
+        +updateFAQ(req: Request, res: Response): Promise~void~
+        +addFAQ(req: Request, res: Response): Promise~void~
+        +deleteFAQ(req: Request, res: Response): Promise~void~
+        +getFAQ(req: Request, res: Response): Promise~void~
+    }
+
+    class FAQTable {
+        -table: ModelCtor~FAQModel~
+        +constructor(sequelize: Sequelize): FAQTable
+        +getAllFAQs(): Promise~FAQModel[]~
+        +getFAQById(id: number): Promise~FAQModel~
+        +deleteFAQ(id: number): Promise~number~
+        +insertFAQ(question: string, answer: string): Promise~FAQModel~
+        +updateFAQ(faq: FAQModel): Promise~array~
+    }
+
+    class FAQModel {
+        +id: number
+        +question: string
+        +answer: string
+    }
+
+    class AboutController {
+        +getInfo(req: Request, res: Response): void
+        +getEliasMaierInfo(req: Request, res: Response): void
+        +postEliasMaierInfo(req: Request, res: Response): void
+        +getJonathanHaesslerInfo(req: Request, res: Response): void
+        +postJonathanHaesslerInfo(req: Request, res: Response): void
+        +getNicolasLuckertInfo(req: Request, res: Response): void
+        +postNicolasLuckertInfo(req: Request, res: Response): void
+        +getPaulinaLeutloffInfo(req: Request, res: Response): void
+        +postPaulinaLeutloffInfo(req: Request, res: Response): void
+        +getRobinErbInfo(req: Request, res: Response): void
+        +postRobinErbInfo(req: Request, res: Response): void
+        +getLuciaSchopperInfo(req: Request, res: Response): void
+        +postLuciaSchopperInfo(req: Request, res: Response): void
+    }
+
+
+    %% Relationships
+    FAQController --> FAQTable : uses
+    FAQTable --> FAQModel : creates
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="payment-system">
+                <div class="diagram-title">Payment System</div>
+                <div class="mermaid">
+                    classDiagram
+    %% Payment System Classes
+    class BachelorCard {
+        +doPayment(cardNumber: string, name: string, securityCode: string, expirationDate: string, price: number, err: function, ok: function): void
+        -parseXML(xmlData: string, err: function, next: function): void
+        -validateCode(merchantName: string, cardNumber: string, err: function, next: function): void
+        -validatePayment(user: User, merchantName: string, price: number, err: function, next: function): void
+        -executePayment(merchantName: string, err: function, transactionCode: string, next: function): void
+    }
+
+    class HCIPal {
+        +doPayment(accountName: string, accountPassword: string, price: Number, err: function, ok: function): void
+        -validateCode(accountName: string, err: function, next: function): void
+        -validatePayment(user: User, err: function, next: function): void
+        -executePayment(token: string, err: function, next: function): void
+    }
+
+    class SWPSafe {
+        +doPayment(swpCode: string, price: Number, err: function, ok: function): void
+        -validatePayment(swpCode: string, price: Number, err: function, next: function): void
+        -parseCSV(data: string, header: string[], err: function, next: function): void
+        -executePayment(token: string, err: function, next: function): void
+        -validateCode(swpCode: string, err: function, next: function): void
+    }
+
+    class PaymentController {
+        -swpSafe: SWPSafe
+        -hciPal: HCIPal
+        -ticketTable: TicketTable
+        -bachelorCard: BachelorCard
+        -eventTable: EventTable
+        +constructor(ticketTable: TicketTable, eventTable: EventTable): PaymentController
+        -makeTicket(req: Request, res: Response): object
+        +swpSafeBuyTicket(req: Request, res: Response): void
+        +testBachelorCard(req: Request, res: Response): void
+        +testHciPal(req: Request, res: Response): void
+        +hciPalBuyTicket(req: Request, res: Response): void
+        +testSwpSafe(req: Request, res: Response): void
+        +bachelorCardBuyTicket(req: Request, res: Response): void
+    }
+
+    %% Relationships
+    PaymentController --> SWPSafe : uses
+    PaymentController --> HCIPal : uses
+    PaymentController --> BachelorCard : uses
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="ticketing-favorites">
+                <div class="diagram-title">Ticketing Favorites</div>
+                <div class="mermaid">
+                    classDiagram
+    %% Ticketing and Favorites System
+    class TicketController {
+        -ticketTable: TicketTable
+        +constructor(ticketTable: TicketTable, eventTable: EventTable): TicketController
+        +getTickets(req: Request, res: Response): Promise~void~
+    }
+
+    class FavoritesController {
+        -favoritesTable: FavoritesTable
+        +constructor(favoritesTable: FavoritesTable): FavoritesController
+        +addFavorite(req: Request, res: Response): Promise~void~
+        +removeFavorite(req: Request, res: Response): Promise~void~
+        +getFavorites(req: Request, res: Response): Promise~void~
+    }
+
+    class TicketTable {
+        -table: ModelCtor~TicketModel~
+        +constructor(sequelize: Sequelize): TicketTable
+        +getAllTickets(): Promise~TicketModel[]~
+        +getTicketsForUser(email: string): Promise~TicketModel[]~
+        +getTicketsForEvent(eventId: number): Promise~TicketModel[]~
+        +insertTicket(ticket: TicketModel): Promise~array~
+        +deleteTicket(email: string, eventId: number): Promise~number~
+    }
+
+    class FavoritesTable {
+        -table: ModelCtor~FavoritesModel~
+        +constructor(sequelize: Sequelize): FavoritesTable
+        +insertFavorite(email: string, eventId: number): Promise~FavoritesModel~
+        +deleteFavorite(email: string, eventId: number): Promise~number~
+        +getFavoritesForUser(email: string): Promise~FavoritesModel[]~
+    }
+
+    class TicketModel {
+        +email: string
+        +eventId: number
+        +category: string
+        +amount: number
+    }
+
+    class FavoritesModel {
+        +email: string
+        +eventId: number
+    }
+
+    %% Relationships
+    TicketController --> TicketTable : uses
+    FavoritesController --> FavoritesTable : uses
+    TicketTable --> TicketModel : creates
+    FavoritesTable --> FavoritesModel : creates
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="sequence-diagrams">
+            <h2>Frontend Sequence Diagrams</h2>
+            <div class="section-intro">
+                <p><strong>Bezahlprozess:</strong> Modelliert den Ablauf zwischen User, System, Backend und Payment
+                    Provider.
+                    Für authentifizierte User werden Event-Daten, Ticket-Anzahl und Gesamtpreis angezeigt, dann die
+                    Zahlung über den Provider abgewickelt.</p>
+
+                <p><strong>Passwort editieren:</strong> Fokussiert auf den Teil mit der meisten Interaktion zwischen
+                    Systemmodulen.
+                    Während der Diagrammerstellung wurde eine Ineffizienz erkannt und korrigiert: Die
+                    Passwort-Format-Überprüfung erfolgt nun
+                    vor der Backend-Anfrage zur Überprüfung des alten Passworts.</p>
+            </div>
+            
+            <div class="diagram-container" id="passwort-bearbeiten">
+                <div class="diagram-title">Passwort Bearbeiten</div>
+                <div class="mermaid">
+                    sequenceDiagram
+    participant User
+    participant System
+    participant Backend
+
+    Note over User, Backend: Diagramm 1: Passwort bearbeiten (Original)
+    
+    User->>System: 1: request to localhost
+    System->>Backend: 2: get user
+    Backend->>Backend: 3: check authentication of user
+    Backend->>System: 5: send user
+    System->>User: 4: send landingpage
+    User->>System: 6: submit data
+    System->>System: 7: check input format
+    
+    alt format check not successful
+        System->>User: 8: format check not successful
+        Note left of User: break wrong format
+    else format check successful
+        System->>Backend: 9: send old password
+        Backend->>Backend: 10: check pw against database
+        
+        alt old password wrong
+            Backend->>System: 12: send boolean response: false
+            System->>User: 11: display error message: wrong password
+        else old password correct
+            Backend->>System: 13: send boolean response: true
+            System->>Backend: 14: send updated user
+            Backend->>Backend: 15: update user
+            System->>User: 16: redirect to ./profile
+        
+    end
+end
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="passwort-bearbeiten-vereinfacht">
+                <div class="diagram-title">Passwort Bearbeiten Vereinfacht</div>
+                <div class="mermaid">
+                    sequenceDiagram
+    participant User
+    participant System
+    participant Backend
+
+    Note over User, Backend: Diagramm 2: Passwort bearbeiten (Vereinfacht)
+    
+    User->>System: 1: request to localhost
+    System->>Backend: 2: get user
+    Backend->>Backend: 3: check authentication of user
+    Backend->>System: 5: send user
+    System->>User: 4: send landingpage
+    User->>System: 6: submit data
+    System->>Backend: 7: send old password
+    Backend->>Backend: 8: check pw against database
+    
+    alt old password wrong
+        Backend->>System: 10: send boolean response: false
+        System->>User: 9: display error message: wrong password
+    else old password correct
+        Backend->>System: 11: send boolean response: true
+        System->>System: 12: check input format
+        
+        alt format check not successful
+            System->>User: 13: format check not successful
+            Note left of User: break wrong format
+        else format check successful
+            System->>Backend: 14: send updated user
+            Backend->>Backend: 15: update user
+            System->>User: 16: redirect to ./profile
+        
+    end
+end
+                </div>
+            </div>
+            
+            <div class="diagram-container" id="zahlungsprozess">
+                <div class="diagram-title">Zahlungsprozess</div>
+                <div class="mermaid">
+                    sequenceDiagram
+    participant User
+    participant System
+    participant Backend
+    participant PaymentProvider as Payment Provider
+
+    Note over User, PaymentProvider: Diagramm 3: Zahlungsprozess
+    
+    User->>System: 1: request to localhost
+    System->>Backend: 2: get event
+    Backend->>Backend: 3: check authentication of user
+    Backend->>System: 4: send event details
+    System->>System: 5: compute amount and cost
+    System->>User: 6: send landingpage
+    User->>System: 7: submit data
+    System->>System: 8: check input format
+    
+    alt format check not successful
+        System->>User: 9: error - format check not successful
+        Note left of User: break wrong format
+    else format check successful
+        System->>Backend: 10: send data
+        Backend->>PaymentProvider: 11: send data sequentially
+        
+        alt payment data incorrect
+            PaymentProvider->>Backend: 12: error - data incorrect
+            Backend->>System: 13: error message
+            System->>User: 14: error message
+        else payment successful
+            PaymentProvider->>Backend: 15: data correct
+            Backend->>Backend: 16: update ticket database
+            Backend->>System: 17: payment successful
+            System->>User: 18: redirect to success page
+        end
+    end
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <script>
+        // Mermaid Konfiguration
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#4CAF50',
+                primaryTextColor: '#333',
+                primaryBorderColor: '#4CAF50',
+                lineColor: '#666',
+                secondaryColor: '#f0f0f0',
+                tertiaryColor: '#fff'
+            }
+        });
+    </script>
+</body>
+
+</html>
