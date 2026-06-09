@@ -1,0 +1,22 @@
+[
+  {
+    "id": "konstanz-seepromenade",
+    "name": "Konstanz Seepromenade Loop",
+    "shortDescription": "Die klassische Bodensee-Runde: Stadtgarten, glatte Seepromenade, Altstadt.",
+    "driveDuration": "0 min",
+    "type": "urban",
+    "heroImage": "routes/konstanz-seepromenade/images/hero.jpg",
+    "metaFile": "routes/konstanz-seepromenade/meta.json",
+    "gpxFile": "routes/konstanz-seepromenade/route.gpx"
+  },
+  {
+    "id": "konstanz-litzelstetten",
+    "name": "Egg – Horn – Litzelstetten",
+    "shortDescription": "Entlang der Bodensee-Uferpromenade zur Horn Halbinsel mit 270°-Panorama.",
+    "driveDuration": "10 min",
+    "type": "trail",
+    "heroImage": "routes/konstanz-litzelstetten/images/hero.jpg",
+    "metaFile": "routes/konstanz-litzelstetten/meta.json",
+    "gpxFile": "routes/konstanz-litzelstetten/route.gpx"
+  }
+]

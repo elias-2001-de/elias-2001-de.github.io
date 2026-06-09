@@ -1,0 +1,31 @@
+{
+  "id": "konstanz-seepromenade",
+  "name": "Konstanz Seepromenade Loop",
+  "driveDuration": "0 min",
+  "distance": "8.3 km",
+  "surface": "Asphaltpromenade, Kopfsteinpflaster in der Altstadt",
+  "difficulty": "Anfänger",
+  "description": "Die klassische Konstanzer Skaterunde. Startpunkt ist der Bahnhof — von dort geht es durch den Stadtgarten zum Hafen, dann auf die Seepromenade entlang des Bodensee-Ufers in Richtung Osten. Der Weg am See ist breit, glatt und nahezu eben. Bei klarem Wetter sieht man das Schweizer Ufer und die ersten Alpenkämme. Am Hörnle wendet die Route durch ruhige Wohnstraßen südlich der Altstadt, durchquert das historische Zentrum — ein kurzer rauer Abschnitt — und kehrt zum Ausgangspunkt zurück. In entspanntem Tempo in unter einer Stunde zu fahren.",
+  "heroImage": "images/hero.jpg",
+  "images": [
+    { "file": "images/hafen.jpg", "caption": "Das Konzilgebäude und der Hafen von der Promenade aus" }
+  ],
+  "sections": [
+    {
+      "id": "muenstergasse-cobbles",
+      "type": "warning",
+      "label": "Kopfsteinpflaster Münstergasse",
+      "detail": "Historisches Kopfsteinpflaster für ca. 250 m rund um den Münsterplatz. Geschwindigkeit drosseln, Knie beugen, locker bleiben — der Untergrund ist unregelmäßig.",
+      "fromIndex": 165,
+      "toIndex": 192
+    },
+    {
+      "id": "seepromenade-smooth",
+      "type": "highlight",
+      "label": "Seepromenade",
+      "detail": "Breite, makellos glatte Asphaltpromenade direkt am Bodensee. Flacher Gerader, leichter Seewind — perfekt um den Stride zu öffnen. Schönste Strecke bei Sonnenuntergang.",
+      "fromIndex": 47,
+      "toIndex": 103
+    }
+  ]
+}

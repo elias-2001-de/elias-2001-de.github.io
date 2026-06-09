@@ -1,0 +1,31 @@
+{
+  "id": "konstanz-litzelstetten",
+  "name": "Egg – Horn – Litzelstetten",
+  "driveDuration": "10 min",
+  "distance": "11.8 km",
+  "surface": "Asphaltierter Radweg, kurzer Kiesabschnitt",
+  "difficulty": "Anfänger",
+  "description": "Eine der schönsten Uferskate-Strecken der Region. Startpunkt ist das Strandbad Egg (kostenlose Parkplätze an Werktagen vormittags). Die Route folgt dem ausgewiesenen Radweg nordwärts entlang des Bodensee-Ufers. Nach einer kurzen Engstelle an den Bootshäusern öffnet sich der Weg völlig. Die Horn Halbinsel — eine schmale Landzunge, die in den See ragt — bietet einen 270°-Blick über das offene Wasser: westlich der Überlinger See, östlich der Obersee. Bei klarer Sicht sind die Vorarlberger Alpen zu erkennen. Die Route endet im ruhigen Dorf Litzelstetten. Rückfahrt auf demselben Weg oder mit der Fähre vom Litzelstetter Steg (saisonal).",
+  "heroImage": "images/hero.jpg",
+  "images": [
+    { "file": "images/horn-panorama.jpg", "caption": "Blick von der Horn Halbinsel — Wasser auf drei Seiten" }
+  ],
+  "sections": [
+    {
+      "id": "bootshaus-narrow",
+      "type": "warning",
+      "label": "Engstelle Bootshäuser",
+      "detail": "Der Radweg verengt sich auf ca. 1,5 m zwischen den Bootshäusern und dem Seeufer. Auf Gegenverkehr und Fußgänger achten, Tempo deutlich reduzieren.",
+      "fromIndex": 28,
+      "toIndex": 57
+    },
+    {
+      "id": "horn-panorama",
+      "type": "highlight",
+      "label": "Horn Halbinsel",
+      "detail": "Schmale Halbinsel mit Wasser auf drei Seiten — freier Blick über den gesamten Überlinger See bis zu den Vorarlberger Alpen. Bank vorhanden. Absolutes Highlight der Strecke.",
+      "fromIndex": 140,
+      "toIndex": 195
+    }
+  ]
+}

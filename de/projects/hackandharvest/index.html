@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skate Routen — Inline-Skating rund um den Bodensee</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <h1 class="topbar__title">Skate Routen</h1>
+    <p class="topbar__sub">Inline-Skating am Bodensee</p>
+  </header>
+
+  <div class="app">
+
+    <!-- Left: route list -->
+    <aside class="sidebar" aria-label="Routenliste">
+      <div id="route-list"><p class="loading">Routen werden geladen&hellip;</p></div>
+    </aside>
+
+    <!-- Right: map + detail -->
+    <div class="detail">
+      <div id="map" aria-label="Interaktive Karte"></div>
+
+      <div class="detail-scroll">
+
+        <!-- shown before any route is selected -->
+        <div id="empty-state" class="empty-state">
+          <p>Route aus der Liste auswählen, um Details und Karte anzuzeigen.</p>
+        </div>
+
+        <!-- shown after a route is selected -->
+        <div id="detail-content" style="display:none">
+
+          <!-- name + meta strip -->
+          <div class="detail-header">
+            <h2 id="detail-name"></h2>
+            <div class="meta-pills">
+              <span class="meta-pill" title="Streckenlänge">
+                <span aria-hidden="true">&#128205;</span>
+                <strong id="detail-distance"></strong>
+              </span>
+              <span class="meta-pill" title="Fahrzeit zum Start">
+                <span aria-hidden="true">&#128664;</span>
+                <strong id="detail-drive"></strong> Fahrt
+              </span>
+              <span class="meta-pill" title="Schwierigkeit">
+                <span aria-hidden="true">&#9733;</span>
+                <strong id="detail-difficulty"></strong>
+              </span>
+              <span class="meta-pill" title="Untergrund">
+                <span aria-hidden="true">&#128690;</span>
+                <strong id="detail-surface"></strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- colour legend (hidden when no sections) -->
+          <div id="section-legend" class="section-legend" style="display:none">
+            <span class="legend-item">
+              <span class="legend-swatch legend-swatch--warning" aria-hidden="true"></span>Warnung
+            </span>
+            <span class="legend-item">
+              <span class="legend-swatch legend-swatch--highlight" aria-hidden="true"></span>Highlight
+            </span>
+          </div>
+
+          <div class="detail-body">
+
+            <!-- description -->
+            <section class="detail-section">
+              <h3>Über diese Route</h3>
+              <p id="detail-description"></p>
+            </section>
+
+            <!-- annotated sections (hidden when empty) -->
+            <section class="detail-section" id="sections-panel" style="display:none">
+              <h3>Streckenabschnitte</h3>
+              <ul id="section-list"></ul>
+            </section>
+
+            <!-- photo gallery -->
+            <div id="gallery" class="gallery" role="list" aria-label="Routenfotos"></div>
+
+            <!-- download -->
+            <div class="download-bar">
+              <p class="download-bar__label">GPX-Datei mitnehmen</p>
+              <a id="download-btn" class="btn btn--download" href="#" download>
+                GPX herunterladen
+              </a>
+            </div>
+
+          </div>
+        </div><!-- /detail-content -->
+      </div><!-- /detail-scroll -->
+    </div><!-- /detail -->
+
+  </div><!-- /app -->
+
+  <p class="map-a11y-note" role="note">
+    Pfeiltasten zum Navigieren auf der Karte · Karte mit Tastatur bedienbar
+  </p>
+
+  <script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
